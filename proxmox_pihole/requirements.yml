@@ -1,0 +1,4 @@
+---
+collections:
+  - geerlingguy.docker
+  - community.docker

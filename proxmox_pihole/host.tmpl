@@ -1,0 +1,4 @@
+[pi-hole]
+%{ for ip_address in pi-hole_ip_addresses ~}
+${ip_address}
+%{ endfor ~}
