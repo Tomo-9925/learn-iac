@@ -4,10 +4,6 @@ terraform {
       source = "telmate/proxmox"
       version = "~> 2.9.11"
     }
-    # zabbix = {
-    #   source = "claranet/zabbix"
-    #   version = "~> 0.4.0"
-    # }
   }
 }
 
