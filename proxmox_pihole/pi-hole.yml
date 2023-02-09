@@ -1,6 +1,7 @@
 ---
-- name: Pi-hole playbook
-  hosts: pi-hole
+- hosts: pi-hole
   roles:
-    - geerlingguy.docker
-    - pi-hole
+    - role: geerlingguy.docker
+      become: true
+    - role: pi-hole
+      become: true

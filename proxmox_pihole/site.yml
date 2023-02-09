@@ -1,2 +1,2 @@
 ---
-- include: pi-hole.yml
+- import_playbook: pi-hole.yml
