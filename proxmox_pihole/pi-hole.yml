@@ -1,7 +1,34 @@
 ---
-- hosts: pi-hole
+- name: Pi-hole Setup
+  hosts: pi-hole
   roles:
     - role: geerlingguy.docker
       become: true
     - role: pi-hole
       become: true
+    - role: community.zabbix.zabbix_agent
+      become: true
+      zabbix_agent_become_on_localhost: false
+      zabbix_api_use: true
+      zabbix_api_server_host: "{{ ZABBIX_SERVER_HOST }}"
+      zabbix_api_server_port: "{{ ZABBIX_SERVER_PORT }}"
+      zabbix_api_login_user: "{{ ZABBIX_USER }}"
+      zabbix_api_login_pass: "{{ ZABBIX_PASS }}"
+      zabbix_api_use_ssl: true
+      zabbix_api_validate_certs: false
+      zabbix_agent_host_state: present
+      zabbix_agent2: true
+      zabbix_agent_startagents: true
+      zabbix_agent(2)_server: "{{ ZABBIX_SERVER_HOST }}"
+      zabbix_agent(2)_serveractive: "{{ ZABBIX_SERVER_HOST }}"
+      zabbix_agent(2)_hostname: "{{ ansible_hostname }}"
+      zabbix_agent(2)_tlsaccept: psk
+      zabbix_agent(2)_tlsconnect: psk
+      zabbix_agent(2)_tlspskidentity: "{{ ZABBIX_AGENT_PSK_IDENTITY }}"
+      zabbix_agent(2)_tlspsk_secret: "{{ ZABBIX_AGENT_PSK_SECRET }}"
+      zabbix_host_groups:
+        - Applications
+        - Linux servers
+      zabbix_agent_link_templates:
+        - App Pi-Hole
+        - Docker by Zabbix agent 2

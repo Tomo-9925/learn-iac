@@ -3,13 +3,13 @@
   ansible.builtin.file:
     path: /root/pi-hole/etc-pihole
     state: directory
-    mode: 640
+    mode: "640"
 
 - name: Create /etc/dnsmasq.d volume
   ansible.builtin.file:
     path: /root/pi-hole/etc-dnsmasq.d
     state: directory
-    mode: 640
+    mode: "640"
 
 - name: Install pip requests
   ansible.builtin.pip:

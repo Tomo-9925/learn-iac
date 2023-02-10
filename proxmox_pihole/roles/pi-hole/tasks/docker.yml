@@ -16,7 +16,7 @@
   ansible.builtin.file:
     path: /root/pi-hole
     state: directory
-    mode: 640
+    mode: "640"
   notify:
     - "Create /etc/pihole volume"
     - "Create /etc/dnsmasq.d volume"

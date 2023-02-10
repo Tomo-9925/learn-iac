@@ -2,3 +2,4 @@
 collections:
   - geerlingguy.docker
   - community.docker
+  - community.zabbix

@@ -1,28 +1,6 @@
 # This file is maintained automatically by "terraform init".
 # Manual edits may be lost in future updates.
 
-provider "registry.terraform.io/claranet/zabbix" {
-  version     = "0.4.0"
-  constraints = "~> 0.4.0"
-  hashes = [
-    "h1:0nnwDRsbRpGqV9CeeJ4Lw1g9w/U8Rg9F6p3bEkebzc0=",
-    "zh:0f144152efaa00c8bf769fbc44302725605dcc5fc956607129e863b1927092c0",
-    "zh:32e9d334cd4e7fe50ef95b0553416e4d74dacaba5cb99e1eb1c9af21a63bd4b9",
-    "zh:4a4f4dc81880ccfb98b2822c62d7aa6573e2938f8e33da8a9fce7fc9207edc4f",
-    "zh:595a7ef60fb9fc67eac6cb4da5191fd8a9bbac1eeaba94945fdcb2513d67e057",
-    "zh:6cc072917b95bc3bbfa4521ba2b751ae7e24627bcb911e6722da2039ed4e2379",
-    "zh:6fdaaf7f0600172806e195f64025a759b9b54d0f6df8fb6dfbc51f38e6ed644f",
-    "zh:83dbcc5cba8abd9f9def30034848585bd8166626d3e40afb64ee150cc7c12e04",
-    "zh:8af6eab803d1f7b588774628a28a554658193d5a1b0c4f265c302a75ea1a7d61",
-    "zh:93135dacf08715a646c3d6d942efa757101e157b6ca8429ac46ce46e29187799",
-    "zh:997f47e89ea3c6156e9998750811ca11ff156b707018443d4763446c1dcc510b",
-    "zh:9a57f9c22348a4cafe0813fd91402917019f61eb3f865e5db7832ae6e6a11c14",
-    "zh:a82ed6f8e79ad26539ab7826d3459e9eb93faf257cc47c04072b9ae1d4b1630c",
-    "zh:b812fbbbc936f32c62c821364e4498bad222c21541cf19aa9f193cac6dca62cd",
-    "zh:e27bb009ea0b7fbbdfdf435395bf38ec2eafae8b6ea200cac6d6b7b0f67dc4d4",
-  ]
-}
-
 provider "registry.terraform.io/hashicorp/local" {
   version = "2.3.0"
   hashes = [

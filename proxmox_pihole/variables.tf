@@ -1,6 +1,6 @@
 variable "pm_api_url" {
   type        = string
-  description = "Value of Proxmox API URL"
+  description = "Value of Proxmox API host"
   sensitive   = true
 }
 
@@ -43,9 +43,15 @@ variable "pi-hole_pass" {
   sensitive   = true
 }
 
-variable "zabbix_url" {
+variable "zabbix_host" {
   type        = string
-  description = "Value of Zabbix API URL"
+  description = "Value of Zabbix API host"
+  sensitive   = true
+}
+
+variable "zabbix_port" {
+  type        = number
+  description = "Value of Zabbix API port"
   sensitive   = true
 }
 
@@ -61,4 +67,14 @@ variable "zabbix_pass" {
   sensitive   = true
 }
 
+variable "zabbix_agent_psk_identity" {
+  type        = string
+  description = "Value of Zabbix agent psk identity"
+  sensitive   = true
+}
 
+variable "zabbix_agent_psk_secret" {
+  type        = string
+  description = "Value of Zabbix agent psk secret"
+  sensitive   = true
+}
